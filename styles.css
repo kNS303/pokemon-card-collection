@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  text-align: center;
+  background-color: brown;
+ 
+}
+
+.display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 40px;
+}
+
+.display__element {
+  width: 250px;
+  padding: 16px;
+  background-image: url("https://i.pinimg.com/originals/d1/b1/be/d1b1be7f563cbbb05eadd304f571c53c.gif");
+  background-size: cover;
+  margin: 8px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: solid 0.3px #000000;
+}
+
+.display__element:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 7px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(43, 116, 182, 1) 25%,
+    rgba(40, 109, 171, 1) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  font-family: "Press Start 2P", cursive;
+}
+
+p {
+  padding: 7px;
+  font-family: "Press Start 2P", cursive;
+  color: whitesmoke;
+  font-size: 13px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(43, 116, 182, 1) 25%,
+    rgba(40, 109, 171, 1) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+h1 {
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 45px;
+  border-radius: 20px;
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 50px;
+}
+
+img {
+  width: 30%;
+}
+
+.pokemonimage {
+  background-image: url("https://cutewallpaper.org/21/pokemon-grass-background/Pokemon-forest-by-BlazingIfrit-Fur-Affinity-dot-net.jpg");
+  width: 100%;
+  border-radius: 20px;
+}
