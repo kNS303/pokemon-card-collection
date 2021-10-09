@@ -11,6 +11,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-right: 40px;
 }
 
 .display__element {
@@ -70,7 +71,7 @@ p {
 h1 {
   text-transform: uppercase;
   color: whitesmoke;
-  font-size: 45px;
+  font-size: 30px;
   border-radius: 20px;
   font-family: "Press Start 2P", cursive;
   margin-bottom: 50px;
@@ -78,6 +79,7 @@ h1 {
 
 img {
   width: 30%;
+  margin-bottom: 50px;
 }
 
 .pokemonimage {
