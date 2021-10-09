@@ -57,7 +57,7 @@ p {
   padding: 7px;
   font-family: "Press Start 2P", cursive;
   color: whitesmoke;
-  font-size: 13px;
+  font-size: 10px;
   border-radius: 20px;
   background: linear-gradient(
     90deg,
@@ -77,9 +77,9 @@ h1 {
   margin-bottom: 50px;
 }
 
-img {
+.pokemonlogo {
   width: 30%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .pokemonimage {
