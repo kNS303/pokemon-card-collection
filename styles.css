@@ -3,7 +3,6 @@
 * {
   text-align: center;
   background-color: brown;
- 
 }
 
 .display {
@@ -25,6 +24,7 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: solid 0.3px #000000;
+  cursor:zoom-in
 }
 
 .display__element:hover {
@@ -86,4 +86,33 @@ h1 {
   background-image: url("https://cutewallpaper.org/21/pokemon-grass-background/Pokemon-forest-by-BlazingIfrit-Fur-Affinity-dot-net.jpg");
   width: 100%;
   border-radius: 20px;
+}
+
+.buttons {
+  margin: 35px;
+}
+
+.formulario {
+  max-width: 60%;
+  background-color: whitesmoke;
+  margin: 8px;
+  font-size: 15px;
+  border: 2px solid rgba(43, 116, 182, 1);
+  border-radius: 8px;
+}
+
+.formulario:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+.buttonbuscar {
+  background-color: rgba(43, 116, 182, 1);
+  color: whitesmoke;
+  border-radius: 8px;
+}
+
+.buttonbuscar:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
 }
