@@ -48,7 +48,10 @@ const inyectarPokemones = (aquiPokemonesMapeo) => {
 
 
 
-window.addEventListener("scroll" , () => {
+  
+*// INTENTO DE SCROLL 
+
+/* window.addEventListener("scroll" , () => {
     const { scrollTop , scrollHeight, clientHeight } = document.documentElement; 
     if (scrollTop + clientHeight >= scrollHeight)
     console.log("Cargar mas pokemones")
@@ -56,16 +59,69 @@ window.addEventListener("scroll" , () => {
     
 }
 
-);
+); */
 
-const formulario = document.querySelector("#formulario")
-const boton = document.querySelector ("#buttonbuscar")
 
-const filtrar = () => {
-    console.log(formulario.value);
+
+document.querySelector("#buttonbuscar").addEventListener ("click", () => {
+    let busquedaPokemon = document.querySelector("#formulario").value  
+    const searchPokemon = async (busquedaPokemon) => {
+
+        let pokemonesBrutos = await fetch(`https://pokeapi.co/api/v2/pokemon/${busquedaPokemon}`);
+        let pokemonesNetos = await pokemonesBrutos.json();
+        let pokemonBuscado = await pokemonesNetos.map((element) => ({
+            
+            name: element.name
+        }))
+        
+        console.log(pokemonBuscado)
+
+    
+    }
+    searchPokemon(busquedaPokemon) 
+}) 
+
+        
+
+
+
+
+
+
+
+
+
+
+// INTENTO DE BUSCADOR
+
+/* let displayBuscar = document.querySelector(".buscar");
+
+let buscarPokemon=async()=>{
+    let id=document.querySelector(".formulario").value;
+    if (id>898) {
+        window.alert("solo hay 898 pokemons");
+        spinner.style.display="none";
+    }
+
+    let result=await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    let pokemonToJson=await result.json();
+    spinner.style.display="none";
+
+    let pokemonInfo= {
+        name:pokemonToJson.name,
+        image: pokemonToJson.sprites.other["official-artwork"]["front_default"],
+        id:`#${pokemonToJson.id.toString().padStart(3,0)}`
+    }
+
+    const pokemonHTML = `
+       <h1 class="displayBuscar__name">${pokemonInfo.name}</h1>
+       <h2 class="displayBuscar__id">${pokemonInfo.id}</h2>
+       <img class="displayBuscar__image" src="${pokemonInfo.image}" alt="${pokemonInfo.name}"/>`;
+    displayBuscar.innerHTML=pokemonHTML;
+    document.querySelector('.pokebal-gif').style.display="none";
 }
 
-boton.addEventListener("click", filtrar)
+document.querySelector(".buscar__btn").addEventListener('click',buscarPokemon) */
 
 
 

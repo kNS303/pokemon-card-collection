@@ -92,7 +92,7 @@ h1 {
   margin: 35px;
 }
 
-.formulario {
+#formulario {
   max-width: 60%;
   background-color: whitesmoke;
   margin: 8px;
@@ -101,18 +101,18 @@ h1 {
   border-radius: 8px;
 }
 
-.formulario:hover {
+#formulario:hover {
   transition: 0.3s;
   transform: scale(1.05);
 }
 
-.buttonbuscar {
+#buttonbuscar {
   background-color: rgba(43, 116, 182, 1);
   color: whitesmoke;
   border-radius: 8px;
 }
 
-.buttonbuscar:hover {
+#buttonbuscar:hover {
   transition: 0.3s;
   transform: scale(1.05);
 }
