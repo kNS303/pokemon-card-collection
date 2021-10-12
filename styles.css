@@ -116,3 +116,36 @@ h1 {
   transition: 0.3s;
   transform: scale(1.05);
 }
+
+.contenedorBuscados {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 15px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.display__elementBuscado {
+  
+  width: 320px;
+  padding: 16px;
+  background-image: url("https://i.pinimg.com/originals/d1/b1/be/d1b1be7f563cbbb05eadd304f571c53c.gif");
+  background-size: cover;
+  margin: 8px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: solid 0.3px #000000;
+  cursor:zoom-in
+}
+
+.display__elementBuscado:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+
+

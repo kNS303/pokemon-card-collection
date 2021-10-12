@@ -48,8 +48,8 @@ const inyectarPokemones = (aquiPokemonesMapeo) => {
 
 
 
-  
-*// INTENTO DE SCROLL 
+
+// INTENTO DE SCROLL 
 
 /* window.addEventListener("scroll" , () => {
     const { scrollTop , scrollHeight, clientHeight } = document.documentElement; 
@@ -69,16 +69,33 @@ document.querySelector("#buttonbuscar").addEventListener ("click", () => {
 
         let pokemonesBrutos = await fetch(`https://pokeapi.co/api/v2/pokemon/${busquedaPokemon}`);
         let pokemonesNetos = await pokemonesBrutos.json();
-        let pokemonBuscado = await pokemonesNetos.map((element) => ({
-            
-            name: element.name
-        }))
         
-        console.log(pokemonBuscado)
+            
+            
+        
+        
+        imprimirPokemon(pokemonesNetos)
 
     
     }
     searchPokemon(busquedaPokemon) 
+
+    const imprimirPokemon = (pokemonesNetos) => { 
+        const btn = document.querySelector("#pokemonBuscado")
+        btn.hidden = false
+        btn.innerHTML = 
+        `<h2>${pokemonesNetos.forms[0].name}</h2>
+        <img class="pokemonimage" src="${pokemonesNetos.sprites.other["official-artwork"]["front_default"]}" alt="${pokemonesNetos.name}"/>
+        <p>NÚMERO #${pokemonesNetos.id}</p>
+        <p>PESO: ${pokemonesNetos.weight/10} KG </p>
+        <p>ALTURA: ${pokemonesNetos.height/10} M </p>`
+
+        
+
+    }
+
+
+
 }) 
 
         
@@ -108,7 +125,7 @@ let buscarPokemon=async()=>{
     spinner.style.display="none";
 
     let pokemonInfo= {
-        name:pokemonToJson.name,
+        forms[0].name:pokemonToJson.name,
         image: pokemonToJson.sprites.other["official-artwork"]["front_default"],
         id:`#${pokemonToJson.id.toString().padStart(3,0)}`
     }
